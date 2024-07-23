@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"rel="stylesheet"/>
+    <title>Play</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#f1eee9',
+              secondary: '#f54725',
+              tertiary: '#f9d678',
+              textDark: '#13313c',
+              textLight: '#475569',
+            },
+            fontFamily: {
+              allFont: ['Poppins', 'sans-serif'],
+              headFont: ['Rubik', 'sans-serif']
+            },
+            maxWidth: {
+              container: '1200px',
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      .nav__links.open{
+        transform: translateY(0);
+      }
+      @media (width > 768px) {
+        nav{
+          padding-block: 2rem 0;
+          padding-inline: 1rem;
+          margin-inline: auto;
+        }
+      }
+    </style>
+  </head>
+  <body class="p-0 m-0 box-border font-allFont bg-primary no-underline list-none ">
+    <nav class="fixed isolate w-full z-10 md:static md:max-w-container md:items-center md:flex md:justify-between md:gap-8">
+      <div class="nav__header p-4 w-full flex items-center justify-between bg-textDark md:flex-1 md:p-0 md:bg-transparent">
+        <div class="nav__logo ">
+          <a href="#" class="flex items-center text-2xl font-semibold text-white md:text-4xl md:text-textDark"
+            >pl<span class="py-1 px-2 text-base bg-secondary rounded-full md:text-white "><i class="ri-play-fill"></i></span>y</a
+          >
+        </div>
+        <div class="nav__menu__btn text-2xl text-white cursor-pointer md:hidden" id="menu-btn">
+          <span><i class="ri-menu-line"></i></span>
+        </div>
+      </div>
+      <ul class="nav__links absolute top-16 left-0 w-full p-8 flex items-center justify-center flex-col gap-8 bg-textDark transition duration-500 -z-10 -translate-y-full md:static md:p-0 md:flex-row md:bg-transparent md:transform-none" id="nav-links">
+        <li><a href="#" class="font-medium text-white transition duration-300 hover:text-secondary md:text-textLight md:border-b-transparent md:border-b-2 md:hover:text-secondary ">Home</a></li>
+        <li><a href="#"class="font-medium text-white transition duration-300 hover:text-secondary md:text-textLight md:border-b-transparent md:border-b-2 md:hover:text-secondary">Trending</a></li>
+        <li><a href="#" class="font-medium text-white transition duration-300 hover:text-secondary md:text-textLight md:border-b-transparent md:border-b-2 md:hover:text-secondary">Collections</a></li>
+        <li><a href="#" class="font-medium text-white transition duration-300 hover:text-secondary md:text-textLight md:border-b-transparent md:border-b-2 md:hover:text-secondary">Categories</a></li>
+        <li><a href="#" class="font-medium text-white transition duration-300 hover:text-secondary md:text-textLight md:border-b-transparent md:border-b-2 md:hover:text-secondary">Contact</a></li>
+      </ul>
+      <div class="nav__btns hidden md:flex md:flex-1">
+        <button class="btn py-3 px-8 outline-none border-none text-base font-semibold whitespace-nowrap text-textDark bg-tertiary rounded-md transition duration-300 cursor-pointer hover:text-white hover:bg-secondary">Sign Up</button>
+      </div>
+    </nav>
+    <header class="section__container header__container max-w-container m-auto py-20 px-4 grid gap-8 md:grid-cols-2 md:items-center">
+      <div class="header__image md:order-2">
+        <img src="assets/header.jpg" alt="header" class="w-full flex max-w-140" />
+      </div>
+      <div class="header__content text-center md:text-left">
+        <h2 class="mb-2 text-2xl font-semibold text-textDark">CREATE PLAYLIST & SHARE IT WITH YOUR FRIENDS</h2>
+        <h1 class="mb-4 text-7xl font-semibold font-headFont leading-20 text-textDark">MUSIC FOR YOUR CURRENT MOOD</h1>
+        <p class="mb-8 text-base font-medium left-7 text-textLight">
+          Discover the perfect soundtrack for every moment with our 'Music for
+          Your Current Mood' section. Whether you're feeling upbeat, reflective,
+          or somewhere in between, explore curated playlists and tunes tailored
+          to match your mood.
+        </p>
+        <div class="header__btns flex items-center justify-center gap-4 md:justify-start">
+          <a href="#">
+            <img src="assets/google-play.jpg" alt="google-play" class="max-w-40 rounded-md"/>
+          </a>
+          <a href="#">
+            <img src="assets/app-store.jpg" alt="app-store" class="max-w-40 rounded-md"/>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
